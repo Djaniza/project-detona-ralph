@@ -11,14 +11,49 @@
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,900;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--styles-->
-    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/global.css">
     <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
-
+<div class="container">
+    <div class="menu">
+        <div class="menu-time">
+            <h2>TIME LEFT</h2>
+            <h2 id="time-left">0</h2>
+        </div>
+        <div class="menu-score">
+            <h2>YOUR SCORE</h2>
+            <h2 id="score">0</h2>
+        </div>
+        <div class="menu-lives">
+            <span class="material-icons">
+                favorite
+                </span>
+            <h2 id="lives">5</h2>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-row">
+            <div class="square enemy" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+        </div>
+        <div class="panel-row">
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+        </div>
+        <div class="panel-row">
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+            <div class="square" id="9"></div>
+        </div>
+    </div>
+</div>
     <script defer src="./src/scripts/engine.js"></script>
 </body>
 </html>
