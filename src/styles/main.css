@@ -41,6 +41,14 @@ dialog::backdrop {
     text-shadow: 21px 20px 61px 33px rgba(0,0,0,0.9);
 }
 
+/* Estilo do item vida do menu */
+.menu-lives {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
 /* Estilo dos ícones do menu */
 .menu-lives .material-icons {
     font-size: 2rem;

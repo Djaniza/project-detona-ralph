@@ -22,7 +22,7 @@ const game = {
         enemyPosition: 0,
         point: 0,
         lives: 5,
-        currentTime: 5,
+        currentTime: 60,
         gameStart: false,
     },
 };
@@ -37,7 +37,7 @@ const moveEnemy = () => {
 
 const resetGame = () => {
     game.values.gameStart = true;
-    game.values.currentTime = 5;
+    game.values.currentTime = 60;
     game.values.lives = 5;
     game.values.point = 0;
     game.view.lives.textContent = game.values.lives;
@@ -90,12 +90,19 @@ const randomSquare = () => {
     }
 }
 
+const playSound = () => {
+    let audio = new Audio("./src/audios/hitSound.mp3")
+    audio.volume = 0.2;
+    return audio.play();
+}
+
 const addListenerHitbox = () => {
     game.view.squares.forEach((square) => {
         square.addEventListener("mousedown", () => {
             if (square.id == game.values.enemyPosition + 1 && game.values.gameStart) {
                 game.values.point++;
                 game.view.score.textContent = game.values.point;
+                playSound();
                 game.view.finalPointsMessage.textContent = game.values.point;
                 game.view.finalPointsMessageTime.textContent = game.values.point;
                 game.values.enemyPosition = null;
