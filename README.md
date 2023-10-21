@@ -16,6 +16,7 @@
 - o cronômetro é zerado após 60s e decresce visualmente no header da página.
 - o campo para a visualização das vidas é mostrado mas não está dinâmico.
 
+  [screen-capture (1).webm](https://github.com/Djaniza/project-detona-ralph/assets/78621637/70ceaf96-bf8b-43f8-aa8f-a96a9bf731cd)
 
 ## Adições a proposta:
 
@@ -26,8 +27,12 @@
 - Parar o jogo quando o jogador errar com suas vidas extras zeradas, neste caso abrimos um modal que mostra a mensagem de que acabaram as vidas extras e qual foi a pontuação.
 - Reiniciar o jogo por um botão através das caixas de comunicação de fim de Jogo.
 
+  [screen-capture.webm](https://github.com/Djaniza/project-detona-ralph/assets/78621637/a94c6433-c3d2-4e41-a814-65d8aedcafa0)
+
+
 ## To-do list
 
+- Deixar o layout responsivo.
 - Limpar o código e melhorar o design.
 - Adicionar fases ao projeto, mudando a velocidade e a quantidade de blocos.
 - Menu para registrar o nome do player e salvar as pontuações (até quatro slots).
