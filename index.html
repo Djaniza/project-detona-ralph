@@ -19,41 +19,72 @@
     <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
-<div class="container">
-    <div class="menu">
-        <div class="menu-time">
-            <h2>TIME LEFT</h2>
-            <h2 id="time-left">0</h2>
+    <div class="container">
+        <div class="menu">
+            <div class="menu-time">
+                <h2>TEMPO</h2>
+                <h2 id="time-left">0</h2>
+            </div>
+            <div class="menu-score">
+                <h2>PONTOS</h2>
+                <h2 id="score">0</h2>
+            </div>
+            <div class="menu-lives">
+                <h2>
+                    <span class="material-icons">
+                        favorite
+                    </span>
+                </h2>
+                <h2 id="lives">5</h2>
+            </div>
         </div>
-        <div class="menu-score">
-            <h2>YOUR SCORE</h2>
-            <h2 id="score">0</h2>
-        </div>
-        <div class="menu-lives">
-            <span class="material-icons">
-                favorite
-                </span>
-            <h2 id="lives">5</h2>
+        <div class="panel">
+            <div class="panel-row">
+                <div class="square enemy" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+            </div>
+            <div class="panel-row">
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+            </div>
+            <div class="panel-row">
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
         </div>
     </div>
-    <div class="panel">
-        <div class="panel-row">
-            <div class="square enemy" id="1"></div>
-            <div class="square" id="2"></div>
-            <div class="square" id="3"></div>
-        </div>
-        <div class="panel-row">
-            <div class="square" id="4"></div>
-            <div class="square" id="5"></div>
-            <div class="square" id="6"></div>
-        </div>
-        <div class="panel-row">
-            <div class="square" id="7"></div>
-            <div class="square" id="8"></div>
-            <div class="square" id="9"></div>
-        </div>
-    </div>
-</div>
     <script defer src="./src/scripts/engine.js"></script>
+    <dialog id="instructions">
+        <img src="./src/images/flyVanellope.png" alt="Vanellope Image">
+        <div class="modal-content">
+            <h2>Como Jogar</h2>
+            <p style="font-size: 12px">
+                Você só tem que acertar o Ralph no quadro em que ele aparecer! Cada acerto vale um ponto, cada erro te tira uma vida extra.
+                Você tem 60 segundo para jogar cada partida, o jogo acaba quando o timer é zerado ou você fica sem vidas. Boa Sorte!
+            </p>
+            <button id="start-button">Entendi!</button>
+        </div>
+    </dialog>
+    <dialog id="time-end">
+        <img src="./src/images/upsideRalph.png" alt="Ralph Image">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>Acabou o tempo!</p>
+            <h2>Sua pontuação final foi de <span id="max-score">0</span> pontos.</h2>
+            <button id="time-end-button">Reiniciar</button>
+        </div>
+    </dialog>
+    <dialog id="lifes-end">
+        <div class="modal-content">
+            <h2>Que pena!!!</h2>
+            <p>Você ficou sem vidas extras.</p>
+            <h2>Sua pontuação final foi de <span id="vida-extra">0</span> pontos.</h2>
+            <button id="reset-button">Reiniciar</button>
+        </div>
+        <img src="./src/images/vanellopeSad.png" alt="Vanellope Image">
+    </dialog>
 </body>
 </html>
